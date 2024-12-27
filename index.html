@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système Expert Médical</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="home" class="container">
+        <h1>Bienvenue au Système Expert Médical</h1>
+        <div class="form-group">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" class="input-field" placeholder="Entrez votre nom">
+        </div>
+        <div class="form-group">
+            <label for="age">Âge:</label>
+            <input type="number" id="age" class="input-field" placeholder="Entrez votre âge">
+        </div>
+        <button class="btn" onclick="startQuestions()">Commencer</button>
+        <button class="btn" onclick="showAbout()">À propos</button>
+    </div>
+
+    <div id="questions" class="container" style="display:none;">
+        <h2>Questions sur les symptômes</h2>
+        <div class="form-group">
+            <label><input type="checkbox" id="fever"> Avez-vous de la fièvre?</label>
+        </div>
+        <div class="form-group">
+            <label><input type="checkbox" id="cough"> Avez-vous une toux?</label>
+        </div>
+        <div class="form-group">
+            <label><input type="checkbox" id="headache"> Avez-vous un mal de tête?</label>
+        </div>
+        <div class="form-group">
+            <label><input type="checkbox" id="rash"> Avez-vous une éruption cutanée?</label>
+        </div>
+        <div class="form-group">
+            <label><input type="checkbox" id="nausea"> Avez-vous des nausées?</label>
+        </div>
+        <div class="form-group">
+            <label><input type="checkbox" id="fatigue"> Ressentez-vous une fatigue extrême?</label>
+        </div>
+        <div class="form-group">
+            <label><input type="checkbox" id="soreThroat"> Avez-vous un mal de gorge?</label>
+        </div>
+        <div class="form-group">
+            <label><input type="checkbox" id="shortnessBreath"> Avez-vous des difficultés à respirer?</label>
+        </div>
+        <!-- Vous pouvez ajouter d'autres symptômes ici -->
+        <button class="btn" onclick="evaluateSymptoms()">Soumettre</button>
+    </div>
+
+   
+    <div id="result" class="container" style="display:none;">
+        <h2>Résultat</h2>
+        <p><strong>Nom:</strong> <span id="userName"></span></p>
+        <p><strong>Âge:</strong> <span id="userAge"></span></p>
+        <p><strong>Diagnostic:</strong> <span id="diagnosis"></span></p>
+        <button class="btn" onclick="goHome()">Retour à l'accueil</button>
+    </div>
+
+   
+    <div id="about" class="container" style="display:none;">
+        <h2>À propos</h2>
+        <p>
+            Ce système expert médical est conçu pour aider à diagnostiquer des maladies courantes en fonction des symptômes fournis par l'utilisateur.
+        </p>
+        <p>Créé par :</p>
+        <ul>
+            <li> Kabongo Kalonji Jenovic</li>
+            <li>Kadima Mbayi soleil</li>
+            <li>Botoko Maissi lea</li>
+            <li>Tshianyi Npongu Jonas</li>
+            <li>NZelo Lisongo Victorine</li>
+        </ul>
+        <button class="btn" onclick="goHome()">Retour à l'accueil</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
